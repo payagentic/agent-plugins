@@ -4,11 +4,13 @@ Inspect wallets, stablecoin balances, recent transactions, policies, agents and 
 
 ## Release status
 
-Version 0.2.1 is a catalog review candidate. Hosted OAuth discovery is not deployed successfully yet. Live consent, tool, refresh and disconnect acceptance must pass before this integration is promoted for production use.
+Version 0.2.2 is a catalog review candidate. Hosted OAuth discovery is not deployed successfully yet. Live consent, tool, refresh and disconnect acceptance must pass before this integration is promoted for production use.
 
 ## Privacy and network behavior
 
 The skills guide the host to call https://mcp.payagentic.ai/mcp using the user's scoped OAuth grant. Account data passes between PayAgentic and the selected AI host and may appear in its conversation history. Host privacy/retention settings and https://payagentic.ai/legal/privacy apply. The package itself stores no account data or credentials and contains no telemetry, executables, hooks, shell children, background processes or third-party credential readers. OAuth tokens are managed by the host in its own credential store. Never paste access tokens, wallet keys or seed phrases into chat.
+
+The hosted PayAgentic service separately stores authorization and security audit records, including user, organization and grant identifiers. Its implementation does not impose a 30-day deletion limit on these audit records, so the directory disclosure uses the longer-than-30-days retention category. This does not extend token validity: expired or revoked credentials must be rejected. Service retention and rights are governed by PayAgentic's privacy policy. The skills do not send conversation history or data to services beyond the declared connector.
 
 ## Examples
 

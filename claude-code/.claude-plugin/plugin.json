@@ -1,6 +1,6 @@
 {
   "name": "payagentic",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Read-only PayAgentic account visibility: wallets, balances, transactions, policies, agents and approval status.",
   "author": {
     "name": "PayAgentic",
