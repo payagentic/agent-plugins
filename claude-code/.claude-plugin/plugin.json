@@ -1,12 +1,13 @@
 {
   "name": "payagentic",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Read-only PayAgentic account visibility: wallets, balances, transactions, policies, agents and approval status.",
   "author": {
     "name": "PayAgentic",
     "email": "hello@payagentic.ai"
   },
   "homepage": "https://payagentic.ai/platform/developers",
+  "privacyPolicyUrl": "https://payagentic.ai/legal/privacy",
   "repository": "https://github.com/payagentic/agent-plugins",
   "license": "MIT",
   "keywords": [

@@ -4,7 +4,7 @@ Inspect wallets, stablecoin balances, recent transactions, policies, agents and 
 
 ## Release status
 
-Version 0.2.0 is a catalog review candidate. Hosted OAuth discovery is not deployed successfully yet. Live consent, tool, refresh and disconnect acceptance must pass before this integration is promoted for production use.
+Version 0.2.1 is a catalog review candidate. Hosted OAuth discovery is not deployed successfully yet. Live consent, tool, refresh and disconnect acceptance must pass before this integration is promoted for production use.
 
 ## Privacy and network behavior
 
