@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "payagentic",
+  "version": "0.2.0",
+  "description": "Read-only PayAgentic account visibility: wallets, balances, transactions, policies, agents and approval status.",
+  "author": {
+    "name": "PayAgentic",
+    "email": "hello@payagentic.ai"
+  },
+  "homepage": "https://payagentic.ai/platform/developers",
+  "repository": "https://github.com/payagentic/agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "payagentic",
+    "wallets",
+    "read-only",
+    "mcp"
+  ]
+}
