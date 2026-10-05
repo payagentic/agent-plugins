@@ -2,6 +2,8 @@
 
 Public distribution packages for PayAgentic read-only account tools.
 
+Start with the [installation guide](INSTALLATION.md) for Claude, Cursor, Hermes and standalone skills, including current availability and connection requirements.
+
 - `cursor/`: Cursor review candidate with a scoped connector-key configuration and one account skill. The root `.cursor-plugin/marketplace.json` points to this package.
 - `claude-code/`: Claude plugin with workflow skills and a hosted MCP reference.
 - `hermes/`: portable Agent Plugin with workflow skills; the native Hermes MCP connector is configured separately with OAuth.
