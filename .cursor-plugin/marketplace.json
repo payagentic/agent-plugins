@@ -1,0 +1,18 @@
+{
+  "name": "payagentic",
+  "owner": {
+    "name": "PayAgentic",
+    "email": "hello@payagentic.ai"
+  },
+  "metadata": {
+    "description": "Read-only PayAgentic account visibility for Cursor."
+  },
+  "plugins": [
+    {
+      "name": "payagentic",
+      "source": "cursor",
+      "description": "Inspect PayAgentic wallets, balances, transactions, policies, agents and approval status. No payment or account mutations.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "payagentic",
+  "version": "0.1.0",
+  "description": "Read-only access to PayAgentic wallets, stablecoin balances, recent transactions, policies, agents and approval status. Connect your PayAgentic organization with scoped read access. This integration cannot initiate payments, approve requests, change policies or fund wallets.",
+  "author": {
+    "name": "PayAgentic",
+    "email": "hello@payagentic.ai"
+  },
+  "homepage": "https://payagentic.ai/platform/developers",
+  "license": "MIT",
+  "keywords": ["payagentic", "mcp", "wallets", "read-only", "developer-tools"],
+  "logo": "assets/logo.png",
+  "mcpServers": "./mcp.json",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "PAYAGENTIC_API_KEY": {
+        "type": "string",
+        "title": "PayAgentic connector key",
+        "description": "Your scoped, read-only connector key. Configure in the host; never paste into a conversation."
+      }
+    },
+    "required": ["PAYAGENTIC_API_KEY"]
+  }
+}

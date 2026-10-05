@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "payagentic": {
+      "url": "https://mcp.payagentic.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${PAYAGENTIC_API_KEY}"
+      }
+    }
+  }
+}
