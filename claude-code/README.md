@@ -4,7 +4,7 @@ Inspect wallets, stablecoin balances, recent transactions, policies, agents and 
 
 ## Release status
 
-Version 0.2.2 is a catalog review candidate. Hosted OAuth discovery is not deployed successfully yet. Live consent, tool, refresh and disconnect acceptance must pass before this integration is promoted for production use.
+Version 0.2.2 was verified in the Claude directory on 4 October 2026. Production hosted OAuth acceptance remains pending as of 5 October 2026. Live consent, tool, refresh and disconnect acceptance must pass before this integration is promoted for production use.
 
 ## Privacy and network behavior
 
