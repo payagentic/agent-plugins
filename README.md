@@ -2,13 +2,14 @@
 
 Public distribution packages for PayAgentic read-only account tools.
 
-Start with the [installation guide](INSTALLATION.md) for Claude, Cursor, Hermes and standalone skills, including current availability and connection requirements.
+Start with the [installation guide](INSTALLATION.md) for Codex, Claude, Cursor, Hermes and standalone skills, including current availability and connection requirements.
 
 - `cursor/`: Cursor review candidate with a scoped connector-key configuration and one account skill. The root `.cursor-plugin/marketplace.json` points to this package.
-- `claude-code/`: Claude plugin with workflow skills and a hosted MCP reference.
+- `claude-code/`: Claude plugin candidate with workflow skills, a public OAuth client and a fixed native callback port.
+- `codex/`: Codex marketplace review source with a read-only OAuth plugin and two skills. The root `.agents/plugins/marketplace.json` points to this package.
 - `hermes/`: portable Agent Plugin with workflow skills; the native Hermes MCP connector is configured separately with OAuth.
 
-The Claude directory lists version 0.2.2 (verified October 4, 2026). Cursor 0.1.0 and Hermes 0.2.0 remain review candidates. Production OAuth and authenticated host acceptance are still pending as of October 5, 2026. Claude publication does not establish that account connections work. No Cursor or Hermes marketplace approval is claimed.
+The Claude directory lists version 0.2.2 (verified October 4, 2026). Cursor 0.1.0 and Hermes 0.2.0 remain review candidates. The October 13 native-client candidates require the compatible API and protected registry before live acceptance. Production OAuth and authenticated host acceptance remain separate release gates. Claude publication does not establish that account connections work. No Cursor or Hermes marketplace approval is claimed.
 
 ## Standalone skills
 
@@ -29,3 +30,5 @@ Privacy: https://payagentic.ai/legal/privacy
 Terms: https://payagentic.ai/legal/terms
 
 Licensed under MIT; see LICENSE.
+
+Native callback configuration and acceptance are documented in [OAUTH-NATIVE-CLIENTS.md](OAUTH-NATIVE-CLIENTS.md).

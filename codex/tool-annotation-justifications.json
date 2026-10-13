@@ -1,0 +1,107 @@
+{
+  "purpose": "Publisher reference for the current six read-only MCP tools. Copy each justification into the matching annotation field after scanning the deployed server; this artifact is not proof of portal submission or approval.",
+  "tools": [
+    {
+      "name": "get_balance",
+      "annotations": {
+        "readOnlyHint": {
+          "value": true,
+          "justification": "GET /v1/wallets/{wallet_id} through the internal API binding. Reads one permitted wallet record and its balance. No application-state mutation is performed."
+        },
+        "openWorldHint": {
+          "value": false,
+          "justification": "The wallet identifier is validated and used only in a fixed internal PayAgentic API path; the tool cannot call user-supplied URLs or external payment destinations."
+        },
+        "destructiveHint": {
+          "value": false,
+          "justification": "It cannot debit, credit, fund or change the selected wallet."
+        }
+      }
+    },
+    {
+      "name": "list_policies",
+      "annotations": {
+        "readOnlyHint": {
+          "value": true,
+          "justification": "GET /v1/policies through the internal API binding. Reads existing spending-policy records. No application-state mutation is performed."
+        },
+        "openWorldHint": {
+          "value": false,
+          "justification": "It queries only the fixed internal PayAgentic policies collection under the caller's API authorization; it cannot browse external services."
+        },
+        "destructiveHint": {
+          "value": false,
+          "justification": "It cannot create, edit, enable, disable or delete policies."
+        }
+      }
+    },
+    {
+      "name": "list_recent_transactions",
+      "annotations": {
+        "readOnlyHint": {
+          "value": true,
+          "justification": "GET /v1/transactions through the internal API binding. Reads recorded transaction activity. No application-state mutation is performed."
+        },
+        "openWorldHint": {
+          "value": false,
+          "justification": "It queries only the fixed internal PayAgentic transactions collection under the caller's API authorization; it cannot interact with external recipients or merchants."
+        },
+        "destructiveHint": {
+          "value": false,
+          "justification": "It cannot initiate, cancel, reverse or refund a transaction."
+        }
+      }
+    },
+    {
+      "name": "list_wallets",
+      "annotations": {
+        "readOnlyHint": {
+          "value": true,
+          "justification": "GET /v1/wallets through the internal API binding. Reads permitted wallet records, optionally filtered by an allowlisted chain name. No application-state mutation is performed."
+        },
+        "openWorldHint": {
+          "value": false,
+          "justification": "It queries only the fixed internal PayAgentic wallets collection with a validated chain filter; it cannot connect to arbitrary hosts or blockchain destinations."
+        },
+        "destructiveHint": {
+          "value": false,
+          "justification": "It cannot create, modify, delete or fund wallets."
+        }
+      }
+    },
+    {
+      "name": "payagentic_list_agents",
+      "annotations": {
+        "readOnlyHint": {
+          "value": true,
+          "justification": "GET /v1/agents through the internal API binding. Reads existing agent records and their status. No application-state mutation is performed."
+        },
+        "openWorldHint": {
+          "value": false,
+          "justification": "It queries only the fixed internal PayAgentic agents collection under the caller's API authorization; it does not execute agents or contact their external services."
+        },
+        "destructiveHint": {
+          "value": false,
+          "justification": "It cannot create, execute, reconfigure or remove an agent."
+        }
+      }
+    },
+    {
+      "name": "payagentic_list_approvals",
+      "annotations": {
+        "readOnlyHint": {
+          "value": true,
+          "justification": "GET /v1/approvals through the internal API binding. Reads approval requests and their current status. No application-state mutation is performed."
+        },
+        "openWorldHint": {
+          "value": false,
+          "justification": "It queries only the fixed internal PayAgentic approvals collection under the caller's API authorization; it cannot send requests or decisions to external parties."
+        },
+        "destructiveHint": {
+          "value": false,
+          "justification": "It cannot approve, deny, cancel or otherwise modify a request."
+        }
+      }
+    }
+  ]
+}
