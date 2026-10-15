@@ -28,8 +28,10 @@ This package uses the supported `.codex-plugin/plugin.json` format. Register
 its exported marketplace source, install PayAgentic and open a new task to test
 it. Local installation does not publish to OpenAI's public directory. OAuth
 requires a working deployed authorization server, MCP resource metadata and the
-approved Codex native client profile. Use a current Codex version supporting
-Client ID Metadata Documents; native connection acceptance remains a separate
+approved Codex native client profile. This package explicitly selects Codex's
+public OAuth client identity; no dynamic registration is required. Current
+Codex uses a resource-specific `/callback/<server-id>` loopback path, which the
+deployed API must support. Native connection acceptance remains a separate
 release gate from package validation.
 
 ## Privacy and support
