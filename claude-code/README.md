@@ -4,7 +4,7 @@ Inspect wallets, stablecoin balances, recent transactions, policies, agents and 
 
 ## Release status
 
-Version 0.2.2 was verified in the Claude directory on 4 October 2026. Production hosted OAuth acceptance remains pending as of 5 October 2026. Live consent, tool, refresh and disconnect acceptance must pass before this integration is promoted for production use.
+Version 0.2.2 was verified in the Claude directory on 4 October 2026. This 0.2.3 candidate adds explicit Claude Code public-client configuration and fixed callback port 27895; it is not a verified directory update. The compatible API and protected registry must be deployed before native acceptance. Production consent, tools, refresh and disconnect still require recorded acceptance.
 
 ## Privacy and network behavior
 
@@ -28,6 +28,20 @@ License: MIT (LICENSE)
 
 ## Claude setup
 
-Install the plugin from its approved directory listing when available. Before approval, use a local review installation of this folder. Complete Claude's browser OAuth authorization for the declared MCP endpoint; do not supply a shared API key. The host discovers the server's OAuth metadata. If discovery or sign-in fails, stop and report the connection error; the hosted deployment must be fixed.
+Install the plugin from its approved directory listing when available. Before approval, use a local review installation of this folder. Complete Claude's browser OAuth authorization for the declared MCP endpoint; do not supply a shared API key. The host discovers the server's OAuth metadata. For Claude Code, this candidate declares `oauth.clientId: payagentic-claude-code` and `oauth.callbackPort: 27895`; keep that port free locally. No client secret is needed. If discovery or sign-in fails, stop and report the connection error; the hosted deployment must be fixed.
 
 The plugin references one hosted connector. Pair its connector and bundle listings under the same publisher organization to avoid duplicate tools. Disconnect in Claude and revoke the grant in PayAgentic's Developers → MCP servers page.
+
+### Standalone Claude Code review
+
+Use a current Claude Code release supporting these OAuth options. Avoid a second
+server entry when the plugin is already installed. For a standalone connection:
+
+```sh
+claude mcp add --transport http --client-id payagentic-claude-code --callback-port 27895 payagentic https://mcp.payagentic.ai/mcp
+claude mcp login payagentic
+```
+
+For plugin installation, use `/mcp` to authenticate instead. Native Claude Code
+acceptance does not establish the separate Claude web connector's registration.
+See [native-client release and acceptance](../OAUTH-NATIVE-CLIENTS.md).

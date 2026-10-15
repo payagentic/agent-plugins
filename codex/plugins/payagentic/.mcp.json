@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "payagentic": {
+      "url": "https://mcp.payagentic.ai/mcp",
+      "oauth": {
+        "clientId": "https://chatgpt.com/oauth/codex/client.json"
+      }
+    }
+  }
+}

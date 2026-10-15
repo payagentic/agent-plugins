@@ -1,0 +1,20 @@
+{
+  "name": "payagentic",
+  "interface": {
+    "displayName": "PayAgentic"
+  },
+  "plugins": [
+    {
+      "name": "payagentic",
+      "source": {
+        "source": "local",
+        "path": "./plugins/payagentic"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

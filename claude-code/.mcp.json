@@ -2,7 +2,11 @@
   "mcpServers": {
     "payagentic": {
       "type": "http",
-      "url": "https://mcp.payagentic.ai/mcp"
+      "url": "https://mcp.payagentic.ai/mcp",
+      "oauth": {
+        "clientId": "payagentic-claude-code",
+        "callbackPort": 27895
+      }
     }
   }
 }

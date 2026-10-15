@@ -1,16 +1,31 @@
 # Install PayAgentic skills and account tools
 
-Status checked 5 October 2026. This guide distinguishes installing a package from successfully connecting an account. Hosted account acceptance remains pending. Do not treat a catalog entry or discovered tool names as proof of a working connection.
+Native-client candidate configuration updated 13 October 2026; historical directory observations retain their original dates. This guide distinguishes installing a package from successfully connecting an account. Hosted account acceptance remains pending. Do not treat a catalog entry or discovered tool names as proof of a working connection.
 
 ## Choose your client
 
 | Client or directory | Package status | Account connection |
 |---|---|---|
-| Claude | Version 0.2.2 was verified in the directory on 4 October | Hosted OAuth; live acceptance pending |
+| Claude | Version 0.2.2 was verified in the directory on 4 October; 0.2.3 native candidate prepared | Claude Code public OAuth client, fixed port 27895; live acceptance pending |
+| Codex | Local marketplace review candidate prepared | Codex metadata client with native loopback callback; deployment and live acceptance pending |
 | Cursor | Publisher application submitted on 5 October; approval pending | Review candidate uses a scoped connector key |
 | Hermes | Version 0.2.0 review candidate; catalog review pending | Separately configured hosted OAuth MCP server |
 | skills.sh | Both skills listed; isolated installation verified | Skills alone do not configure an account connection |
 | Smithery | Unlisted preview; six tool definitions discovered | Authenticated OAuth acceptance pending |
+
+## Codex: local review candidate
+
+Register the source from this checkout:
+
+```sh
+codex plugin marketplace add /absolute/path/to/agent-plugins
+```
+
+Install PayAgentic, open a new task and use the host's OAuth connection flow.
+Use a current Codex version supporting Client ID Metadata Documents. The approved
+native profile must first be deployed; installing the package alone does not
+enable it. See [Codex package](codex/plugins/payagentic/README.md) and
+[native acceptance](OAUTH-NATIVE-CLIENTS.md). No OpenAI listing approval is claimed.
 
 ## Claude
 
@@ -41,7 +56,8 @@ The [portable plugin](hermes/README.md) supplies workflow skills. For an authori
 hermes mcp add payagentic --url https://mcp.payagentic.ai/mcp --auth oauth
 ```
 
-Complete browser consent with your own account. OAuth discovery, consent, refresh and disconnect still require live acceptance. Do not use `hermes mcp install payagentic` until the catalog entry is approved and available. Do not add a second copy of the same server.
+Complete browser consent with your own account. Hermes staging consent, reads, refresh and disconnect were recorded on 7 October;
+production and the exact installed host version still need acceptance. Do not use `hermes mcp install payagentic` until the catalog entry is approved and available. Do not add a second copy of the same server.
 
 ## Standalone skills from skills.sh
 
